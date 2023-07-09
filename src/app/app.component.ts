@@ -9,9 +9,9 @@ import { Persona } from './persona.model';
 export class AppComponent {
   titulo = 'Listado de Personas';
   personas: Persona[] = [
-    new Persona('Roxana','Matute'), 
-    new Persona('Kevin','Hernandez'),
-    new Persona('Jared','Matute')
+    new Persona('Maria','Lopez'), 
+    new Persona('Omar','Gonzalez'),
+    new Persona('Juan','Perez')
   ];
   /*
   nombreInput:string = '';
