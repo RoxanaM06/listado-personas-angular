@@ -10,12 +10,9 @@ import { PersonasService } from '../personas.service';
 })
 export class FormularioComponent {
   //@Output() personaCreada = new EventEmitter<Persona>();
-  /*
+  
   nombreInput:string = '';
   apellidoInput:string = '';
-  */
-  @ViewChild('nombreInput') nombreInput: ElementRef;
-  @ViewChild('apellidoInput') apellidoInput: ElementRef;
 
   constructor(private loggingService:LoggingService,
               private personasService:PersonasService){
@@ -25,7 +22,7 @@ export class FormularioComponent {
               }
   
   onAgregarPersona() {
-    let persona1 = new Persona(this.nombreInput.nativeElement.value, this.apellidoInput.nativeElement.value);
+    let persona1 = new Persona(this.nombreInput, this.apellidoInput);
     //this.personas.push(persona1);
     //this.loggingService.enviarMensajeAConsola("Enviamos persona:" + persona1.nombre + " apellido: " + persona1.apellido);
     //this.personaCreada.emit(persona1) //Permite propagar información del componente hijo al componente padre
